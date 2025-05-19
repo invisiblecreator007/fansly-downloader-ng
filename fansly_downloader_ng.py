@@ -40,7 +40,7 @@ from config.modes import DownloadMode
 from download.core import *
 from errors import *
 from fileio.dedupe import dedupe_init
-from pathio import delete_temporary_pyinstaller_files
+from pathio import delete_temporary_preinstalled_files
 from textio import (
     input_enter_close,
     input_enter_continue,
@@ -94,7 +94,7 @@ def main(config: FanslyConfig) -> int:
 
     print_logo()
 
-    delete_temporary_pyinstaller_files()
+    delete_temporary_preinstalled_files()
     load_config(config)
 
     args = parse_args()
